@@ -1,0 +1,106 @@
+.details{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    color: #ECB365;
+    padding-bottom: 50px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding-bottom: 50px;
+    padding: 50px;
+}
+.container .planet-heading{
+    text-align: center;
+}
+.container .planet-weight{
+    padding: 10px 50px;
+}
+.details h1{
+    font-size: 50px;
+    letter-spacing: 25px;
+    text-decoration: underline;
+    text-underline-offset: 15px;
+}
+.details .planet-img{
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 25px;
+
+}
+
+.planet-weight{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.desc,.order{
+    text-align: justify;
+    padding: 10px 50px;
+}
+.desc .desc-title{
+    font-weight: bold;
+    font-size: 20px !important;
+}
+.desc{
+    line-height: 30px;
+}
+.loader{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: cyan;
+}
+.goback{
+    padding: 10px 25px;
+    background: rgba(255,225,255,0.5);
+    color: #000;
+    font-weight: bold;
+    border: none;
+    position: relative;
+    z-index: 1;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.goback::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #F0CAA3;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    border-radius: 10px;
+}
+.goback:hover::before{
+    transform: scaleX(1);
+    transition: all 0.5s ease-in-out;
+}
+
+@media (width<=630px) {
+    .container{
+        padding: 10px;
+    }
+    .planet-img{
+        width: 300px;
+        height: 300px;
+        transition: all 1s ease-in-out;
+    }
+}
+
+@media (width<=430px) {
+    #planetname{
+        letter-spacing: 15px;
+    }
+}

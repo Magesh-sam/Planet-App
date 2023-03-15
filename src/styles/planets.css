@@ -1,0 +1,85 @@
+.planets{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    align-items: center;
+    padding: 50px 250px;
+    gap: 25px;
+
+}
+.planet{
+    background: #0A2647;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 25px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: #F0CAA3;
+    gap: 30px;
+}
+.planets-heading{
+    color: aqua;
+    grid-area: 1/1/2/-1;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+.knowmore{
+    padding: 10px 25px;
+    background: rgba(255,225,255,0.5);
+    color: #000;
+    font-weight: bold;
+    border: none;
+    position: relative;
+    z-index: 1;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.knowmore::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #F0CAA3;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    border-radius: 10px;
+}
+.knowmore:hover::before{
+    transform: scaleX(1);
+    transition: all 0.5s ease-in-out;
+}
+.planets  .planet-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+
+}
+.loader{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: cyan;
+}
+
+
+@media (width<=1000px){
+    .planets{
+        grid-template-columns: repeat(2,1fr);
+        padding: 50px;
+    }
+
+}
+
+@media (width<=700px) {
+    .planets{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
